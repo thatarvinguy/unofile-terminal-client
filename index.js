@@ -41,11 +41,16 @@ switch (action) {
             });
         }).end();
         break;
+    case "-s":
     case "-u":
         var filePath = process.argv[3];
         var fileName = require("path").parse(filePath).base;
         var fileCode = process.argv[4];
         var fileData;
+        var foreverStamp = "";
+        if (action == "-s"){
+            foreverStamp = "&forever=false"
+        }
         try {
             fileData = fs.readFileSync(filePath);
         }
@@ -56,7 +61,7 @@ switch (action) {
         request({
             host: "unofile-thepc.rhcloud.com",
             method: "POST",
-            path: "/upload?file="+fileName+"&code="+fileCode,
+            path: "/upload?file="+fileName+"&code="+fileCode+foreverStamp,
             headers: {}
         }, function(res) {
             var data = "";
