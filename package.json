@@ -1,6 +1,6 @@
 {
   "name": "unofile",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "A command line tool to easily share and store files with unoFile",
   "main": "index.js",
   "scripts": {
