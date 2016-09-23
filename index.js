@@ -59,7 +59,7 @@ switch (action) {
             break;
         }
         request({
-            host: "unofile-thepc.rhcloud.com",
+            host: "unofile.net",
             method: "POST",
             path: "/upload?file="+fileName+"&code="+fileCode+foreverStamp,
             headers: {}
