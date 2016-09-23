@@ -9,7 +9,7 @@ switch (action) {
     case "-d":
         var fileCode = process.argv[3];
         request({
-            host: "unofile-thepc.rhcloud.com",
+            host: "unofile.net",
             method: "GET",
             path: "/f/" + fileCode,
             headers: {}
